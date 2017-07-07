@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    {% load static from static %}
+    <head>
+        <!--- Initialization - Set initial width to the browser's width --->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title> Puzzlebot Corner - Projects </title>
+
+        <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+
+        <!-- Load custom stylesheets -->
+        <link rel="stylesheet" href="{% static 'css/siteHeadStyle.css' %}">
+        <link rel="stylesheet" href="{% static 'css/projectStyle.css' %}">
+    </head>
+
+    <body>
+        {% include 'siteHead.html' %}
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4" id="projectPageButtons">
+                    <button class="btn projectPageButtonElement" id="projectPageRight" type="button"> > </button>
+                    <p class="projectPageButtonElement" id="pageCountText"></p>
+                    <button class="btn projectPageButtonElement" id="projectPageLeft" type="button"> < </button>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4" id="projectRowLeft">
+                    {{ projectLeftHtml | safe }}
+                </div>
+                <div class="col-sm-4" id="projectRowRight">
+                    {{ projectRightHtml | safe }}
+                </div>
+                <div class="col-sm-2" id="projectRowWhitespace"></div>
+            </div>
+        </div>
+    </body>
+
+    <!-- Load Javascript -->
+    <!-- Get static bootstrap and jquery files  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'js/pageControl.js' %}"></script>
+
+    <script>
+    $( document ).ready(function(){
+        initializePages({{ pageCount }});
+    })
+    </script>
+
+</html>

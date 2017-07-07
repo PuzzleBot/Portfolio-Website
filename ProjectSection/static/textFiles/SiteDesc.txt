@@ -1,0 +1,1 @@
+This website was built to serve as both a blog and protfolio for myself. It's currently a work in progress, so it's probably far from perfect at the moment.

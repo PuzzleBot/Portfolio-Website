@@ -1,0 +1,62 @@
+<!-- Contains elements for the top of the site, including the
+     title, side links and navigation bar. -->
+
+<div class="container-fluid" id="fullHeader">
+    <div class="row" id="siteHeader">
+        <div class="col-sm-1"></div>
+
+        <!-- Title and subtitle -->
+        <div class="col-sm-7" id="siteTitles">
+            <h4 id="headerSubtitle">
+                The Online Portfolio of
+            </h4>
+            <h1 id="headerTitle">
+                Brandon Tan
+            </h1>
+        </div>
+
+        <!--External links-->
+        <div class="col-sm-3" id="siteSideLinks">
+            {% load static from static %}
+            <ul id="linksList">
+                <li class="row headerLink">
+                    <a class="col-sm-12" href="https://ca.linkedin.com/in/brandon-tan-194b30b1">
+                        <img class="headerLinkLogo" src="{% static 'images/In-2C-28px-R.png' %}">
+                        <p class="headerLinkText"> @Brandon Tan </p>
+                    </a>
+                </li>
+
+                <li class="row headerLink">
+                    <a class="col-sm-12" href="https://github.com/PuzzleBot">
+                        <img class="headerLinkLogo" src="{% static 'images/GitHub-Mark-32px.png' %}">
+                        <p class="headerLinkText"> @Puzzlebot </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+    <!-- Navigation bar -->
+    <div class="row" id="siteNav">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand">Navigation ></a>
+                    </div>
+
+                    <!-- Bar elements -->
+                    <ul class="nav navbar-nav">
+                        <li id="homeButton"><a href="/">Home</a></li>
+                        <li id="projectButton"><a href="/projects/">Projects</a></li>
+                        <li id="contactButton"><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="col-sm-1"></div>
+
+    </div>
+</div>

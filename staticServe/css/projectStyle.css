@@ -1,0 +1,24 @@
+#projectRowLeft{
+    margin-left: -10px;
+    margin-right: 10px;
+}
+
+#projectRowRight{
+    margin-left: 10px;
+    margin-right: -10px;
+}
+
+.projectPageButtonElement{
+    text-align: center;
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-size: 14pt;
+}
+
+#projectPageLeft{
+    visibility: hidden;
+}

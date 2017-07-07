@@ -1,0 +1,1 @@
+A fairly large program which uses ray tracing to display a scene of simple shapes specified by the user. This project originally started as a side project, but was expanded upon during my 4th year of University as an independent project for course credit.

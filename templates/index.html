@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    {% load static from static %}
+    <head>
+        <!--- Initialization - Set initial width to the browser's width --->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title> Puzzlebot Corner - Brandon Tan </title>
+
+        <!-- Get static bootstrap and jquery files from the static url -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js'%}"></script>
+        <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+
+        <!-- Load custom stylesheets and javascript -->
+        <link rel="stylesheet" href="{% static 'css/mainStyle.css' %}">
+        <link rel="stylesheet" href="{% static 'css/siteHeadStyle.css' %}">
+    </head>
+
+    <body>
+        {% include 'siteHead.html' %}
+        <script>
+            document.getElementById("homeButton").className = "active";
+        </script>
+
+        <div class="container-fluid" id="blogArea">
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-7">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="blogTitleBox">
+                            <h3 id="blogTitle">What's New?</h3>
+                        </div>
+                        <div class="panel-body" id="blogBodyBox">
+                            <p id="blogBody">
+        Placeholder text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus malesuada gravida est et tincidunt. Donec ipsum urna, molestie sed pulvinar eget, dignissim id est. In hac habitasse platea dictumst. Proin condimentum, felis vulputate euismod tempus, elit nulla laoreet velit, a blandit ligula eros nec lacus. Cras porttitor urna tellus, sed ultricies dui feugiat nec. Nulla eget rhoncus sem, vitae ultricies neque. Sed semper scelerisque purus commodo consectetur. Pellentesque maximus, nibh quis feugiat molestie, orci lectus faucibus est, vel iaculis erat magna nec purus.
+
+        Etiam non bibendum ipsum. Vestibulum arcu eros, dignissim sit amet accumsan sit amet, elementum vitae urna. In dictum lectus non lectus tincidunt, eget consectetur leo mattis. Suspendisse potenti. Proin imperdiet quam in turpis pulvinar egestas. Phasellus ut laoreet nisi. Vivamus volutpat neque nec suscipit tincidunt. Aliquam ac pharetra ante. Quisque eget dui et dui consequat venenatis nec nec erat.
+
+        Nunc quis erat blandit, tempor nisi ac, feugiat tellus. Vestibulum eget purus ut magna euismod ultricies. Quisque tincidunt vitae erat non luctus. Donec malesuada purus et nisl venenatis, sit amet imperdiet massa tincidunt. Sed ultrices mattis diam nec vulputate. Maecenas porttitor auctor tincidunt. Fusce ut volutpat leo. Cras eu dui non mi porta varius sit amet convallis leo. Quisque a mi pretium, rhoncus mauris vel, hendrerit odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque congue est metus, vitae suscipit ipsum ornare ac. Donec euismod condimentum lacus non convallis.
+
+        Duis mattis fringilla tellus et suscipit. Curabitur mollis mauris ligula, eget varius sem vehicula in. Phasellus id erat sed elit feugiat gravida non sit amet est. Nunc a massa id ex accumsan iaculis in sit amet diam. Aliquam lectus lacus, egestas non ex ac, congue imperdiet justo. Sed facilisis urna a vulputate fringilla. Morbi congue fermentum efficitur. Proin rhoncus tortor eu tellus scelerisque, vitae aliquam arcu sollicitudin. Ut risus nibh, eleifend quis leo nec, molestie finibus nunc. Morbi at justo sit amet nibh cursus egestas at eu ligula. Proin a enim volutpat, pellentesque mauris quis, interdum nisl. Nulla id semper risus. Curabitur eleifend ornare mauris nec luctus. Ut eleifend rhoncus dolor, ut semper est rutrum vel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+    </body>
+
+</html>

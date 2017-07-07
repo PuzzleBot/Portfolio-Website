@@ -1,0 +1,19 @@
+#blogArea{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#blogTitleArea{
+    margin: 0px;
+}
+
+#blogTitle{
+    margin: 0px;
+}
+
+#blogBodyArea{
+    margin: 5px;
+}
+#blogBody{
+    white-space: pre-wrap;
+}

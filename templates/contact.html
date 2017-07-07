@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    {% load static from static %}
+    <head>
+        <!--- Initialization - Set initial width to the browser's width --->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title> Puzzlebot Corner - Projects </title>
+
+        <!-- Get static bootstrap and jquery files from the static url -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js'%}"></script>
+        <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+
+        <!-- Load custom stylesheets and javascript -->
+        <link rel="stylesheet" href="{% static 'css/siteHeadStyle.css' %}">
+    </head>
+
+    <body>
+        {% include 'siteHead.html' %}
+        <script>
+            document.getElementById("contactButton").className = "active";
+        </script>
+    </body>
+
+</html>
