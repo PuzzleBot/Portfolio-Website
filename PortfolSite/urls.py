@@ -20,7 +20,6 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    url(r'^polls/', include('polls.urls')),
     url(r'^$', views.index, name='index'),
     url(r'^projects/', include('ProjectSection.urls')),
     url(r'^contact/', include('ContactSection.urls')),
