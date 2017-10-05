@@ -1,6 +1,15 @@
 # Portfolio-Website
 This is a website built in Django which was meant to showcase various things I have made. It will eventually be hosted permanently and have its own domain.
 
+## Dependencies
+
+Make sure you have these installed on your computer before trying to host the site on
+localhost:
+
+Django
+OpenSSL (with TLS 1.2)
+Python 2.7.9 or above
+
 ## Hosting the website on localhost
 
 First, make sure Django is installed. Installation instructions can be found [here.](https://www.djangoproject.com/download/)

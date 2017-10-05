@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.template import loader
 from . import settings
+from . import blogFetch
+from .externalFetch import XKCDcontent
 
 
 def index(request):
@@ -13,6 +15,8 @@ def index(request):
         descFile.close()
     except IOError:
         bodyText = "Whoops! We couldn't load the text for this part. Please check back later."
+
+    xkcdData = XKCDcontent()
 
     context = { 'frontPageBody' : bodyText }
     return HttpResponse(template.render(context, request))
