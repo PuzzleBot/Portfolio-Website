@@ -22,8 +22,6 @@ class XKCDcontent:
             self.hoverText = responseDict["alt"]
             self.comicNumber = responseDict["num"]
             self.imageLink = responseDict["img"]
-            print(self.title)
-            print(self.hoverText)
         return {"xkcdTitle":self.title, "xkcdHoverText":self.hoverText, "xkcdComicNum":self.comicNumber, "xkcdImageLink":self.imageLink}
 
     def cacheComic(self):

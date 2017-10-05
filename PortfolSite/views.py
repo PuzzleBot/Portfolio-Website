@@ -18,5 +18,5 @@ def index(request):
 
     xkcdData = XKCDcontent()
 
-    context = { 'frontPageBody' : bodyText }
+    context = { 'frontPageBody' : bodyText, 'xkcdComicNum': xkcdData.comicNumber, 'xkcdTitle': xkcdData.title }
     return HttpResponse(template.render(context, request))
