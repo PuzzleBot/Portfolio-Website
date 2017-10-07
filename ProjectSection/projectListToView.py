@@ -27,6 +27,8 @@ def generateProjectPageHtml():
 
     return { 'projectLeftHtml': htmlStringLeft, 'projectRightHtml': htmlStringRight, 'pageCount': ((projectCounter / 6) + 1) }
 
+# Generates a panel containing project data from the database.
+# The panel is given the class "portfol-projectPanel"
 def generateProjectPanel(projectName, projectLanguages, descriptionFileLink, projectLink, pageNumber):
     # Sanitize incoming database entries
     projectName = strip_tags(projectName)
@@ -54,7 +56,7 @@ def generateProjectPanel(projectName, projectLanguages, descriptionFileLink, pro
             projectDescription = "Unable to load description. Please check back later."
 
     # Create the panel
-    panelHtmlString = '<div class="panel panel-default pageControl_page-'+ str(pageNumber) +'">'\
+    panelHtmlString = '<div class="panel panel-default portfol-projectPanel pageControl_page-'+ str(pageNumber) +'">'\
 \
                         + '<div class="panel-heading">'\
                             + '<h4>' + projectName + '</h4>'\
@@ -62,7 +64,7 @@ def generateProjectPanel(projectName, projectLanguages, descriptionFileLink, pro
                         + '</div>'\
 \
                         + '<div class="panel-body">'\
-                            + '<p>' + projectDescription + '</p>'\
+                            + '<p class="portfol-projectPanelBody">' + projectDescription + '</p>'\
                             + '<a href="' + projectLink + '">' + projectLink + '</a>'\
                         + '</div>'\
 \

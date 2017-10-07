@@ -29,10 +29,10 @@
                 <div class="col-sm-7">
                     <div class="panel panel-default">
                         <div class="panel-heading" id="blogTitleBox">
-                            <h3 id="blogTitle">What's New?</h3>
+                            <h3 class="portfol-panelTitleText" id="blogTitle">What's New?</h3>
                         </div>
                         <div class="panel-body" id="blogBodyBox">
-                            <p id="blogBody">{{ frontPageBody }}
+                            <p class="portfol-panelBodyText" id="blogBody">{{ frontPageBody }}
                             </p>
                         </div>
                     </div>
@@ -40,13 +40,11 @@
                 <div class="col-sm-3">
                     <div class="panel panel-default">
                         <div class="panel-heading" id="sideBlock1-titleBox">
-                            <h4 id="sideBlock1-title">Read this: XKCD by Randall Monroe</h3>
+                            <h4 class="portfol-panelTitleText" id="sideBlock1-title">Read this: XKCD by Randall Monroe</h3>
                         </div>
                         <div class="panel-body" id="sideBlock1-bodyBox">
                             <p>XKCD is a humorous webcomic featuring slice-of-life situations various fields of science and engineering, written by a man who seems to know way too much. Give it a read!</p>
-                            <p>Latest XKCD: #{{ xkcdComicNum }}:
-                                <a href="https://xkcd.com">"{{ xkcdTitle }}"</a>
-                            </p>
+                            <h5 class="portfol-panelBodyText" id="sideBlock1-body">Latest XKCD: #{{ xkcdComicNum }}: <a href="https://xkcd.com">"{{ xkcdTitle }}"</a></h5>
 
                         </div>
                     </div>

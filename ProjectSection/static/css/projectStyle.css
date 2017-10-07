@@ -19,6 +19,11 @@
     font-size: 14pt;
 }
 
+.portfol-projectPanelBody{
+    max-height: 64px;
+    overflow-y: auto;
+}
+
 #projectPageLeft{
     visibility: hidden;
 }
