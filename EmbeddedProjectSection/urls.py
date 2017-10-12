@@ -1,4 +1,4 @@
-"""PortfolSite URL Configuration
+"""Embedded Project Page URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -20,9 +20,6 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^projects/standalone', include('ProjectSection.urls')),
-    url(r'^projects/embedded', include('EmbeddedProjectSection.urls')),
-    url(r'^contact/', include('ContactSection.urls')),
-    url(r'^admin/', admin.site.urls)
+    url(r'^$', views.embeddedProjectPage, name='embeddedProjectPage'),
+    url(r'^pickANumber', include('PickANumber.urls'))
 ]

@@ -1,11 +1,12 @@
 TABLE_ID = 0001
+PYTHON = python2
 
 all:
-	python2 manage.py runserver
+	$(PYTHON) manage.py runserver
 
 migrate: projectTables
 
 projectTables:
-	python2 manage.py makemigrations ProjectSection
-	python2 manage.py migrate ProjectSection
-	python2 manage.py sqlmigrate ProjectSection $(TABLE_ID)
+	$(PYTHON) manage.py makemigrations ProjectSection
+	$(PYTHON) manage.py migrate ProjectSection
+	$(PYTHON) manage.py sqlmigrate ProjectSection $(TABLE_ID)

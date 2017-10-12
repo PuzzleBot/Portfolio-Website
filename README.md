@@ -10,11 +10,13 @@ Django
 OpenSSL (with TLS 1.2)
 Python 2.7.9 or above
 
+
 ## Hosting the website on localhost
 
 First, make sure Django is installed. Installation instructions can be found [here.](https://www.djangoproject.com/download/)
 
-Once that is done, navigate to this directory using the terminal and type "python manage.py runserver" or "make".
+Once that is done, navigate to this directory using the terminal and type "python2 manage.py runserver" or "make". If your command for python is not "python2", add
+"PYTHON=<python command>" if using make.
 
 The site can then be accessed using any browser at 127.0.0.1:8000.
 
