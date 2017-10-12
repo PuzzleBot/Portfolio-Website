@@ -50,7 +50,7 @@ function showPreviousPage(){
 
 
 function initializePages(numberOfPages){
-    document.getElementById("projectButton").className = "active";
+    document.getElementById("projectButton").className = "dropdown active";
     pageControl_maxPages = numberOfPages;
     document.getElementById("pageCountText").innerHTML = "Page 1 of " + pageControl_maxPages;
 

@@ -1,5 +1,6 @@
 <!-- Contains elements for the top of the site, including the
-     title, side links and navigation bar. -->
+     title, side links and navigation bar. Included on every
+     page of the site. -->
 
 <div class="container-fluid" id="fullHeader">
     <div class="row" id="siteHeader">
@@ -50,7 +51,14 @@
                     <!-- Bar elements -->
                     <ul class="nav navbar-nav">
                         <li id="homeButton"><a href="/">Home</a></li>
-                        <li id="projectButton"><a href="/projects/">Projects</a></li>
+                        <li class="dropdown" id="projectButton">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/projects/">Standalone Applications</a></li>
+                                <li><a href="#">Embedded Site Applications</a></li>
+                            </ul>
+                        </li>
                         <li id="contactButton"><a href="/contact/">Contact</a></li>
                     </ul>
                 </div>

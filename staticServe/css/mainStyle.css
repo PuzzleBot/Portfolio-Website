@@ -7,13 +7,13 @@
     margin: 0px;
 }
 
-#blogTitle{
+.portfol-panelTitleText{
     margin: 0px;
 }
 
 #blogBodyArea{
     margin: 5px;
 }
-#blogBody{
+.portfol-panelBodyText{
     white-space: pre-wrap;
 }

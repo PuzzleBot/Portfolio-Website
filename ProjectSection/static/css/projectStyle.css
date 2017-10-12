@@ -20,7 +20,7 @@
 }
 
 .portfol-projectPanelBody{
-    max-height: 64px;
+    height: 64px;
     overflow-y: auto;
 }
 
