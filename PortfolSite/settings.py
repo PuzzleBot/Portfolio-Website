@@ -57,7 +57,9 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [(BASE_DIR + '/templates/'),
                  (BASE_DIR + '/ProjectSection/templates/'),
-                 (BASE_DIR + '/ContactSection/templates/')],
+                 (BASE_DIR + '/ContactSection/templates/'),
+                 (BASE_DIR + '/EmbeddedProjectSection/templates/'),
+                 (BASE_DIR + '/PickANumber/templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,6 +125,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [(BASE_DIR + "/static/"),
                     (BASE_DIR + "/ProjectSection/static/"),
-                    (BASE_DIR + "/ContactSection/static/")]
+                    (BASE_DIR + "/ContactSection/static/"),
+                    (BASE_DIR + "/EmbeddedProjectSection/static/"),
+                    (BASE_DIR + "/PickANumber/static/")]
 
 STATIC_ROOT = BASE_DIR + '/staticServe/'

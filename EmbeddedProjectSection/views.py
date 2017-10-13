@@ -7,4 +7,8 @@ from django.shortcuts import render
 
 # Create your views here.
 def embeddedProjectPage(request):
-    return HttpResponse("Page Loaded")
+    template = loader.get_template("embeddedProjectIndex.html")
+
+    context = {}
+
+    return HttpResponse(template.render(context, request))
