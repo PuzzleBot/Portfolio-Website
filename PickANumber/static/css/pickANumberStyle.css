@@ -1,0 +1,23 @@
+#pickANumber_title{
+    text-align: center;
+}
+
+.pickANumber-playerSide{
+    text-align: left;
+    margin: 5px;
+}
+
+.pickANumber-cpuSide{
+    text-align: right;
+    margin: 5px;
+}
+
+.btn{
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.col-sm-5{
+    align-content: center;
+}

@@ -7,4 +7,6 @@ from django.shortcuts import render
 
 # Create your views here.
 def pickANumberApp(request):
-    return HttpResponse("Page Loaded")
+    template = loader.get_template("pickANumberUI.html")
+    context = {}
+    return HttpResponse(template.render(context, request))

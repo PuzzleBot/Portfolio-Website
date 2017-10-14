@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    {% load static from static %}
+    <head>
+        <!--- Initialization - Set initial width to the browser's width --->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title> Puzzlebot Corner - Brandon Tan </title>
+
+        <!-- Get static bootstrap and jquery files from the static url -->
+        {% include 'frameworks.html' %}
+
+        <!-- Load custom stylesheets and javascript -->
+        <link rel="stylesheet" href="{% static 'css/mainStyle.css' %}">
+        <link rel="stylesheet" href="{% static 'css/siteHeadStyle.css' %}">
+        <link rel="stylesheet" href="{% static 'css/pickANumberStyle.css' %}">
+    </head>
+
+    <body>
+        {% include 'siteHead.html' %}
+        <script>
+            document.getElementById("projectButton").className = "dropdown active";
+        </script>
+
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="row" id="pickANumber_title">
+                    <!-- Input: User can choose the range of numbers, but the lower bound must be 1 -->
+                    <h2>"Pick A Number"</h2>
+                    <h4>Choose a number between:</h4>
+                    <h4>1 and 10</h4>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5 pickANumber-playerSide">
+                        <!-- UI panel for choosing a number and name -->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label for="pickANumber_numberInput">Enter the numbers each person has chosen, one at a time:</label>
+                                    <input type="number" class="form-control" id="pickANumber_numberInput">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pickANumber_nameInput">Attach a name to the chosen number (optional)</label>
+                                    <input type="text" class="form-control" id="pickANumber_nameInput">
+                                </div>
+                                <button type="button" class="btn" id="pickANumber_addNumButton">Add</button>
+                            </div>
+                        </div>
+
+                        <!-- Panel displaying chosen numbers and names -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3>Numbers chosen so far:</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p id="pickANumber_savedNumbers">(Change this text as numbers are entered)</p>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-warning" id="pickANumber_removeAllButton">Remove All</button>
+                    </div>
+                    <div class="col-sm-6 pickANumber-cpuSide">
+                        <h1 id="pickANumber_cpuNumText">The computer has chosen the number: </h1>
+                        <h3 id="pickANumber_cpuChosenNameText">The person with the closest number was \< name \>! </h3>
+                        <h3 id="pickANumber_cpuChosensNumText">Their number was: </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+
+    </body>
+
+</html>

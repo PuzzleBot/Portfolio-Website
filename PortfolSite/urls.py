@@ -21,8 +21,8 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^projects/standalone', include('ProjectSection.urls')),
-    url(r'^projects/embedded', include('EmbeddedProjectSection.urls')),
+    url(r'^projects/standalone/', include('ProjectSection.urls')),
+    url(r'^projects/embedded/', include('EmbeddedProjectSection.urls')),
     url(r'^contact/', include('ContactSection.urls')),
     url(r'^admin/', admin.site.urls)
 ]
